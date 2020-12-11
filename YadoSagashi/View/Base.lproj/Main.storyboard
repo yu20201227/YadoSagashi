@@ -30,26 +30,34 @@
                                 <rect key="frame" x="300" y="26" width="59" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="search"/>
+                                <connections>
+                                    <action selector="searchButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfk-H2-wlW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="LZs-CQ-dva" id="rT1-fq-BUT"/>
+                        <outlet property="textField" destination="bdn-ex-6Es" id="Xq5-PS-Juc"/>
+                        <segue destination="kcL-vK-xKO" kind="presentation" identifier="detailVC" id="orB-iY-UEa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-183.19999999999999" y="71.514242878560722"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="QaW-PG-tsP">
             <objects>
-                <viewController id="kcL-vK-xKO" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="kcL-vK-xKO" customClass="DetailViewController" customModule="YadoSagashi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zzD-bh-Qnr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="8El-el-sVF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="347"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6V-Eu-bsT">
@@ -65,11 +73,18 @@
                                 <rect key="frame" x="259" y="551" width="100" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="call"/>
+                                <connections>
+                                    <action selector="callButtonWithSender:" destination="kcL-vK-xKO" eventType="touchUpInside" id="fbA-L8-xlo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5JX-Le-vcg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="8El-el-sVF" id="QY7-Ri-EVa"/>
+                        <outlet property="webView" destination="H6V-Eu-bsT" id="RSv-GJ-1FS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDL-aM-gt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
