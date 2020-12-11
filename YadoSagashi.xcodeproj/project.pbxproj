@@ -3,19 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75AD4A01B173AA6CF08F89C7 /* Pods_YadoSagashi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F664621EC68AF332715E1F68 /* Pods_YadoSagashi.framework */; };
 		EB68B36B2580A665007D0DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B36A2580A665007D0DA9 /* AppDelegate.swift */; };
 		EB68B36D2580A665007D0DA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B36C2580A665007D0DA9 /* SceneDelegate.swift */; };
 		EB68B36F2580A665007D0DA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B36E2580A665007D0DA9 /* ViewController.swift */; };
 		EB68B3722580A665007D0DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB68B3702580A665007D0DA9 /* Main.storyboard */; };
 		EB68B3742580A669007D0DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB68B3732580A669007D0DA9 /* Assets.xcassets */; };
 		EB68B3772580A669007D0DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB68B3752580A669007D0DA9 /* LaunchScreen.storyboard */; };
+		EB6F77B42583441100C50F9F /* AnalyticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6F77B32583441100C50F9F /* AnalyticsModel.swift */; };
+		EB6F77B72583441E00C50F9F /* ShopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6F77B62583441E00C50F9F /* ShopData.swift */; };
+		EB6F77BA2583443300C50F9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6F77B92583443300C50F9F /* DetailViewController.swift */; };
+		EB6F77C32583466300C50F9F /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = EB6F77C22583466300C50F9F /* 1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D890DF21D6A5612F1865B126 /* Pods-YadoSagashi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YadoSagashi.debug.xcconfig"; path = "Target Support Files/Pods-YadoSagashi/Pods-YadoSagashi.debug.xcconfig"; sourceTree = "<group>"; };
 		EB68B3672580A665007D0DA9 /* YadoSagashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YadoSagashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB68B36A2580A665007D0DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB68B36C2580A665007D0DA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,12 @@
 		EB68B3732580A669007D0DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB68B3762580A669007D0DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB68B3782580A669007D0DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6F77B32583441100C50F9F /* AnalyticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsModel.swift; sourceTree = "<group>"; };
+		EB6F77B62583441E00C50F9F /* ShopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopData.swift; sourceTree = "<group>"; };
+		EB6F77B92583443300C50F9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EB6F77C22583466300C50F9F /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1.json; sourceTree = "<group>"; };
+		F2C312EE0648F59459D72896 /* Pods-YadoSagashi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YadoSagashi.release.xcconfig"; path = "Target Support Files/Pods-YadoSagashi/Pods-YadoSagashi.release.xcconfig"; sourceTree = "<group>"; };
+		F664621EC68AF332715E1F68 /* Pods_YadoSagashi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YadoSagashi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AD4A01B173AA6CF08F89C7 /* Pods_YadoSagashi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5269CFC6C9F308AD7CF345B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D890DF21D6A5612F1865B126 /* Pods-YadoSagashi.debug.xcconfig */,
+				F2C312EE0648F59459D72896 /* Pods-YadoSagashi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD4DF9F56270BFBCF62B384E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F664621EC68AF332715E1F68 /* Pods_YadoSagashi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EB68B35E2580A665007D0DA9 = {
 			isa = PBXGroup;
 			children = (
 				EB68B3692580A665007D0DA9 /* YadoSagashi */,
 				EB68B3682580A665007D0DA9 /* Products */,
+				5269CFC6C9F308AD7CF345B4 /* Pods */,
+				DD4DF9F56270BFBCF62B384E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +88,43 @@
 		EB68B3692580A665007D0DA9 /* YadoSagashi */ = {
 			isa = PBXGroup;
 			children = (
+				EB6F77BC2583443A00C50F9F /* Model */,
+				EB6F77BE2583444600C50F9F /* View */,
+				EB6F77BD2583444000C50F9F /* Controller */,
+				EB68B3782580A669007D0DA9 /* Info.plist */,
+				EB6F77C22583466300C50F9F /* 1.json */,
+			);
+			path = YadoSagashi;
+			sourceTree = "<group>";
+		};
+		EB6F77BC2583443A00C50F9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB6F77B32583441100C50F9F /* AnalyticsModel.swift */,
+				EB6F77B62583441E00C50F9F /* ShopData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB6F77BD2583444000C50F9F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				EB68B36A2580A665007D0DA9 /* AppDelegate.swift */,
 				EB68B36C2580A665007D0DA9 /* SceneDelegate.swift */,
 				EB68B36E2580A665007D0DA9 /* ViewController.swift */,
+				EB6F77B92583443300C50F9F /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB6F77BE2583444600C50F9F /* View */ = {
+			isa = PBXGroup;
+			children = (
 				EB68B3702580A665007D0DA9 /* Main.storyboard */,
 				EB68B3732580A669007D0DA9 /* Assets.xcassets */,
 				EB68B3752580A669007D0DA9 /* LaunchScreen.storyboard */,
-				EB68B3782580A669007D0DA9 /* Info.plist */,
 			);
-			path = YadoSagashi;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB68B37B2580A669007D0DA9 /* Build configuration list for PBXNativeTarget "YadoSagashi" */;
 			buildPhases = (
+				E25F14F6498574E852B06C9E /* [CP] Check Pods Manifest.lock */,
 				EB68B3632580A665007D0DA9 /* Sources */,
 				EB68B3642580A665007D0DA9 /* Frameworks */,
 				EB68B3652580A665007D0DA9 /* Resources */,
+				1928E01BFE78BE9D4AB47125 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,17 +189,63 @@
 				EB68B3772580A669007D0DA9 /* LaunchScreen.storyboard in Resources */,
 				EB68B3742580A669007D0DA9 /* Assets.xcassets in Resources */,
 				EB68B3722580A665007D0DA9 /* Main.storyboard in Resources */,
+				EB6F77C32583466300C50F9F /* 1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1928E01BFE78BE9D4AB47125 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YadoSagashi/Pods-YadoSagashi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YadoSagashi/Pods-YadoSagashi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YadoSagashi/Pods-YadoSagashi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E25F14F6498574E852B06C9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YadoSagashi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB68B3632580A665007D0DA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6F77B72583441E00C50F9F /* ShopData.swift in Sources */,
+				EB6F77B42583441100C50F9F /* AnalyticsModel.swift in Sources */,
 				EB68B36F2580A665007D0DA9 /* ViewController.swift in Sources */,
+				EB6F77BA2583443300C50F9F /* DetailViewController.swift in Sources */,
 				EB68B36B2580A665007D0DA9 /* AppDelegate.swift in Sources */,
 				EB68B36D2580A665007D0DA9 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +391,7 @@
 		};
 		EB68B37C2580A669007D0DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D890DF21D6A5612F1865B126 /* Pods-YadoSagashi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +410,7 @@
 		};
 		EB68B37D2580A669007D0DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2C312EE0648F59459D72896 /* Pods-YadoSagashi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
