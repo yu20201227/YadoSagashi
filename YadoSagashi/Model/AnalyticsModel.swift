@@ -41,26 +41,26 @@ class AnalyticsModel {
             switch response.result {
             case .success:
                 do{
-                let json:JSON = try JSON(data: response.data!)
-                print(json.description)
-                var totalHitCount = json["count"].int
-                
-                    if totalHitCount! > 50 {
-                    totalHitCount  = 50
-                }
-                for i in 0...totalHitCount! - 1{
+                    let json:JSON = try JSON(data: response.data!)
+                    print(json.description)
+                    var totalHitCount = json["total_hit_count"].int
                     
-                    if json["rest"][i]["lat"] != "" && json["rest"][i]["lng"] != "" && json["rest"][i]["url"] != "" && json["rest"][i]["name"] != "" && json["rest"][i]["tel"] != "" && json["rest"][i]["image_url"]["shop_image1"] != ""{
-
-                    //階層を指定して掘り下げていく(json解析）
-                        let shopData = ShopData(latitude: json["rest"][i]["lat"].string, longitude: json["rest"][i]["lng"].string,url: json["rest"][i]["url"].string, name:   json["rest"][i]["name"].string,
-                            tel: json["rest"][i]["tel"].string,shop_image: json["rest"][i]["image_url"]["shop_image1"].string)
-                        
-                        self.shopDataArray.append(shopData)
-                    }else{
-                        print("something missing")
+                    if totalHitCount! > 50 {
+                        totalHitCount  = 50
                     }
-                }
+                    for i in 0...totalHitCount! - 1{
+                        
+                        if json["rest"][i]["latitude"] != "" && json["rest"][i]["longitude"] != "" && json["rest"][i]["url"] != "" && json["rest"][i]["name"] != "" && json["rest"][i]["tel"] != "" && json["rest"][i]["image_url"]["shop_image1"] != ""{
+                            
+                            //階層を指定して掘り下げていく(json解析）
+                            let shopData = ShopData(latitude: json["rest"][i]["latitude"].string, longitude: json["rest"][i]["longitude"].string, url: json["rest"][i]["url"].string, name:   json["rest"][i]["name"].string,
+                                                    tel: json["rest"][i]["tel"].string, shop_image: json["rest"][i]["image_url"]["shop_image1"].string)
+                            
+                            self.shopDataArray.append(shopData)
+                        }else{
+                            print("something missing")
+                        }
+                    }
                     
                     self.doneCatchProtocol?.catchData(arrayData: self.shopDataArray, resultCount: self.shopDataArray.count)
                 }catch{
