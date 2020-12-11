@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YadoSagashi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="searchViewController" customModule="YadoSagashi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,16 +31,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="search"/>
                                 <connections>
-                                    <action selector="searchButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfk-H2-wlW"/>
+                                    <action selector="searchButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uL1-h2-5jK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="LZs-CQ-dva" id="rT1-fq-BUT"/>
-                        <outlet property="textField" destination="bdn-ex-6Es" id="Xq5-PS-Juc"/>
+                        <outlet property="mapView" destination="LZs-CQ-dva" id="Tra-hy-R2V"/>
+                        <outlet property="textField" destination="bdn-ex-6Es" id="BcB-Ym-udM"/>
                         <segue destination="kcL-vK-xKO" kind="presentation" identifier="detailVC" id="orB-iY-UEa"/>
                     </connections>
                 </viewController>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="-183.19999999999999" y="71.514242878560722"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail Info View Controller-->
         <scene sceneID="QaW-PG-tsP">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="kcL-vK-xKO" customClass="DetailViewController" customModule="YadoSagashi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="kcL-vK-xKO" customClass="DetailInfoViewController" customModule="YadoSagashi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zzD-bh-Qnr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="call"/>
                                 <connections>
-                                    <action selector="callButtonWithSender:" destination="kcL-vK-xKO" eventType="touchUpInside" id="fbA-L8-xlo"/>
+                                    <action selector="callButtonWithSender:" destination="kcL-vK-xKO" eventType="touchUpInside" id="oe7-YX-n6U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,8 +82,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="8El-el-sVF" id="QY7-Ri-EVa"/>
-                        <outlet property="webView" destination="H6V-Eu-bsT" id="RSv-GJ-1FS"/>
+                        <outlet property="imageView" destination="8El-el-sVF" id="36O-oi-h6m"/>
+                        <outlet property="webView" destination="H6V-Eu-bsT" id="Tkb-wb-l3O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDL-aM-gt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,6 +97,9 @@
         <image name="search" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

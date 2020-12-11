@@ -19,7 +19,7 @@ class searchViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     
     var idoValue = Double()
     var keidoValue = Double()
-    var apikey = ""
+    var apikey = "d88dcf59b664fa3f9b089ed353977965"
     var shopDataArray = [ShopData]()
     var totalHitCount = Int()
     var indexNumber = Int()
@@ -36,6 +36,8 @@ class searchViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        startUpdatingLocation()
+        configureSubViews()
     }
     
     func startAnimation(){
@@ -51,7 +53,7 @@ class searchViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     //位置情報取得許可
-    func permissionForYourLocation(){
+    func startUpdatingLocation(){
         locationManager.requestAlwaysAuthorization()
         let status = CLAccuracyAuthorization.fullAccuracy
         
@@ -104,8 +106,9 @@ class searchViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     
     @IBAction func searchButton(sender:UIButton){
         textField.resignFirstResponder()
+        startAnimation()
         
-        let urlString =  "http://webservice.recruit.co.jp/hotpepper/shop/v1/?key=\(apikey)&lat=\(idoValue)&lng=\(keidoValue)&range=3&count=50&keyword=\(textField.text!)"
+        let urlString =  "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=\(apikey)&latitude=\(idoValue)&longitude=\(keidoValue)&range=3&hit_per_page=50&freeword=\(textField.text!)"
         
         //通信
         let analyticsModel = AnalyticsModel(latitude: idoValue, longitude: keidoValue, url: urlString)
@@ -115,6 +118,7 @@ class searchViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     func addAnnotation(shopData:[ShopData]){
+        removeArray()
         
         for i in 0...totalHitCount - 1 {
             //幾つ情報取得できたか
@@ -154,6 +158,9 @@ class searchViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         totalHitCount = resultCount
         //情報が入ったらインディケーター不要なため
         animationView.removeFromSuperview()
+        
+        //shopDataArrayの中身を取り出してannotationとして設置する
+        addAnnotation(shopData: shopDataArray)
     }
     //アノテーションタップ時
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -167,7 +174,7 @@ class searchViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let detailVC = segue.destination as! DetailViewController
+        let detailVC = segue.destination as! DetailInfoViewController
         detailVC.name = nameStringArray[indexNumber]
         detailVC.tel = telArray[indexNumber]
         detailVC.imageURLString = imageStringArray[indexNumber]
