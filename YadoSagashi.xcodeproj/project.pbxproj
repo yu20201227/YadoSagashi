@@ -10,13 +10,13 @@
 		75AD4A01B173AA6CF08F89C7 /* Pods_YadoSagashi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F664621EC68AF332715E1F68 /* Pods_YadoSagashi.framework */; };
 		EB68B36B2580A665007D0DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B36A2580A665007D0DA9 /* AppDelegate.swift */; };
 		EB68B36D2580A665007D0DA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B36C2580A665007D0DA9 /* SceneDelegate.swift */; };
-		EB68B36F2580A665007D0DA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B36E2580A665007D0DA9 /* ViewController.swift */; };
+		EB68B36F2580A665007D0DA9 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B36E2580A665007D0DA9 /* searchViewController.swift */; };
 		EB68B3722580A665007D0DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB68B3702580A665007D0DA9 /* Main.storyboard */; };
 		EB68B3742580A669007D0DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB68B3732580A669007D0DA9 /* Assets.xcassets */; };
 		EB68B3772580A669007D0DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB68B3752580A669007D0DA9 /* LaunchScreen.storyboard */; };
 		EB6F77B42583441100C50F9F /* AnalyticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6F77B32583441100C50F9F /* AnalyticsModel.swift */; };
 		EB6F77B72583441E00C50F9F /* ShopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6F77B62583441E00C50F9F /* ShopData.swift */; };
-		EB6F77BA2583443300C50F9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6F77B92583443300C50F9F /* DetailViewController.swift */; };
+		EB6F77BA2583443300C50F9F /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6F77B92583443300C50F9F /* DetailInfoViewController.swift */; };
 		EB6F77C32583466300C50F9F /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = EB6F77C22583466300C50F9F /* 1.json */; };
 /* End PBXBuildFile section */
 
@@ -25,14 +25,14 @@
 		EB68B3672580A665007D0DA9 /* YadoSagashi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YadoSagashi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB68B36A2580A665007D0DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB68B36C2580A665007D0DA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB68B36E2580A665007D0DA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB68B36E2580A665007D0DA9 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		EB68B3712580A665007D0DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB68B3732580A669007D0DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB68B3762580A669007D0DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB68B3782580A669007D0DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB6F77B32583441100C50F9F /* AnalyticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsModel.swift; sourceTree = "<group>"; };
 		EB6F77B62583441E00C50F9F /* ShopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopData.swift; sourceTree = "<group>"; };
-		EB6F77B92583443300C50F9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EB6F77B92583443300C50F9F /* DetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
 		EB6F77C22583466300C50F9F /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1.json; sourceTree = "<group>"; };
 		F2C312EE0648F59459D72896 /* Pods-YadoSagashi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YadoSagashi.release.xcconfig"; path = "Target Support Files/Pods-YadoSagashi/Pods-YadoSagashi.release.xcconfig"; sourceTree = "<group>"; };
 		F664621EC68AF332715E1F68 /* Pods_YadoSagashi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YadoSagashi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +111,8 @@
 			children = (
 				EB68B36A2580A665007D0DA9 /* AppDelegate.swift */,
 				EB68B36C2580A665007D0DA9 /* SceneDelegate.swift */,
-				EB68B36E2580A665007D0DA9 /* ViewController.swift */,
-				EB6F77B92583443300C50F9F /* DetailViewController.swift */,
+				EB68B36E2580A665007D0DA9 /* searchViewController.swift */,
+				EB6F77B92583443300C50F9F /* DetailInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,8 +244,8 @@
 			files = (
 				EB6F77B72583441E00C50F9F /* ShopData.swift in Sources */,
 				EB6F77B42583441100C50F9F /* AnalyticsModel.swift in Sources */,
-				EB68B36F2580A665007D0DA9 /* ViewController.swift in Sources */,
-				EB6F77BA2583443300C50F9F /* DetailViewController.swift in Sources */,
+				EB68B36F2580A665007D0DA9 /* searchViewController.swift in Sources */,
+				EB6F77BA2583443300C50F9F /* DetailInfoViewController.swift in Sources */,
 				EB68B36B2580A665007D0DA9 /* AppDelegate.swift in Sources */,
 				EB68B36D2580A665007D0DA9 /* SceneDelegate.swift in Sources */,
 			);
